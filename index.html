@@ -113,14 +113,43 @@ footer {
 }
 </style>
 </head>
+<script>
+function sendWhatsApp() {
+  let name = document.getElementById("name").value;
+  let checkin = document.getElementById("checkin").value;
+  let checkout = document.getElementById("checkout").value;
+  let guests = document.getElementById("guests").value;
+
+  let url = "https://wa.me/919021004890?text="
+    + "Hello Shivneri Resort,%0A"
+    + "Name: " + name + "%0A"
+    + "Check-in: " + checkin + "%0A"
+    + "Check-out: " + checkout + "%0A"
+    + "Guests: " + guests;
+
+  window.open(url, "_blank");
+}
+</script>
 
 <body>
 
 <header>
   <h1>Shivneri Homestay</h1>
   <p>Peaceful Stay Away From Noise 🌿</p>
-  <a href="https://wa.me/919021004890" class="btn">Book Now</a>
-</header>
+<h2>Book Your Room</h2>
+
+<form onsubmit="sendWhatsApp(); return false;">
+  <input type="text" id="name" placeholder="Your Name" required><br><br>
+  
+  <input type="date" id="checkin" required><br><br>
+  
+  <input type="date" id="checkout" required><br><br>
+  
+  <input type="number" id="guests" placeholder="Number of Guests" required><br><br>
+  
+  <button type="submit">Send Booking</button>
+</form>
+   </header>
 
 <section>
 <div class="container">
@@ -130,6 +159,10 @@ footer {
 <p style="text-align:center;">📧 gawadegaurav824@gmail.com</p>
 <p style="text-align:center;">Booking System(Whatsapp)
 </div>
+<a href="https://wa.me/919423512228?text=Hello%20Shivneri%20Resort,%20I%20want%20to%20book%20a%20room.%0A%0ACheck-in:%20%0ACheck-out:%20%0AGuests:%20" class="btn">
+Book on WhatsApp
+</a>
+</a>
 </section>
 
 <section>

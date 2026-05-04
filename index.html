@@ -116,15 +116,12 @@ footer {
 <script>
 function sendWhatsApp() {
   let name = document.getElementById("name").value;
-  let checkin = document.getElementById("checkin").value;
-  let checkout = document.getElementById("checkout").value;
   let guests = document.getElementById("guests").value;
 
   let url = "https://wa.me/919021004890?text="
     + "Hello Shivneri Homestay,%0A"
     + "Name: " + name + "%0A"
     + "Guests: " + guests;
-
   window.open(url, "_blank");
 }
 </script>
